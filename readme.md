@@ -52,3 +52,21 @@ For now the material I am targetting is the material covered by [Prof. Ahmed S. 
     - Linear and Circular Convolutions.
     - DFT Uncertainity Relation.
     - DFT and FFT
+4. Convergence of Sequences of Random Variables
+    - Kolmogorov Maximal Inequality -  Hajek Renyi Inequality - Kronecker's Lemma - Cesaro's Lemma
+    - Definitions of Convergences and Criteria - Weak law of Large numbers - Dominated Convergence - Continuous Mapping Theorem
+    - Characteristic Functions - Central Limit Theorem (IID Case)
+    - Lattic RVs.
+    - Strong Law of Large numbers
+5. Renewal Processes
+6. Discrete Time Markov Chains
+    - The Markovian Property
+    - Transition Probability Matrix.
+    - Strong Markovian Property and Stopping Times
+    - Abel Limit's Theorem.
+    - First Passage Probabilities and State Classification
+    - Communicating States
+    - Discrete Renewal Equation.
+    - Irreducible Discrete Time Markov Chains.
+7. Continuous Time Markov Chains
+8. Random Walks
