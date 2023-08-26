@@ -7,7 +7,21 @@ For now the material I am targetting is the material covered by [Prof. Ahmed S. 
 # Topics
 
 > This is a preliminary transcription of the notes titles. Later I am hoping to modify it to include the "main" theorems formalized along the way. 
-
+0. Background Material
+    - Supremum, Infimum, Maximum and Minimum (Probably in `mathlib4`)
+    - Eigenanalysis (seems mostly in `mathlib4`)
+    - Vector Norms
+    - Block Square Matrices
+    - Jointly Gaussian Random Variables and Guassian Random Vectors
+    - Proper Complex Random Variables
+    - Proper Complex Random Vectors
+    - Functions of Random Variables
+    - Chernoff Bound
+    - Poisson Random Processes
+    - CTFT Table
+    - DTFT Table
+    - 2D Fourier Transform
+    - Continuity of Probability and Borel-Cantelli Lemma. 
 1. Linear Algebra
     - Singular Value Decomposition
     - Matrix Norms
