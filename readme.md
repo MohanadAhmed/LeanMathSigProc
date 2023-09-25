@@ -2,7 +2,7 @@
 
 This repository aims to formalize mathematical theorems in the [`LƎⱯN 4`](https://leanprover.github.io/about/) programming language that are commonly used in the Signal Processing and Communication fields. We build on top of [`mathlib4`](https://github.com/leanprover-community/mathlib4) "The math library of Lean 4". 
 
-For now the material I am targetting is the material covered by [Prof. Ahmed S. Salem](https://www.kaust.edu.sa/en/study/faculty/ahmed-k-sultan-salem) in the [AMCS 249](https://registrar-programguide.kaust.edu.sa/2023-2024/Program-Guide/Courses/AMCS-Applied-Mathematical-and-Computational-Science/200/AMCS-249) course taught at [KAUST](https://www.kaust.edu.sa/). Video recordings of the lectures can be found on the [Prof. Sultan's Youtube Channel](https://www.youtube.com/playlist?list=PLDWe3i9elAdLlaCdx7tMkLNxelfjkrzAY). The [Material Notes](https://drive.google.com/drive/folders/1vKg8hv21zalUVGc0cFOTbKlHzQIomiVu) have been generously placed on a public Google Drive Link.
+For now the material I am targetting is the material covered by [Prof. Ahmed S. Salem](https://www.kaust.edu.sa/en/study/faculty/ahmed-k-sultan-salem) in the [AMCS 249](https://registrar-programguide.kaust.edu.sa/2023-2024/Program-Guide/Courses/AMCS-Applied-Mathematical-and-Computational-Science/200/AMCS-249) course taught at [KAUST](https://www.kaust.edu.sa/). Video recordings of the lectures can be found on the [Prof. Sultan's Youtube Channel](https://www.youtube.com/playlist?list=PLDWe3i9elAdLlaCdx7tMkLNxelfjkrzAY). The [Materials/Notes](https://drive.google.com/drive/folders/1vKg8hv21zalUVGc0cFOTbKlHzQIomiVu) have been generously placed on a public Google Drive Link.
 
 # Topics
 
@@ -23,10 +23,36 @@ For now the material I am targetting is the material covered by [Prof. Ahmed S. 
     - 2D Fourier Transform
     - Continuity of Probability and Borel-Cantelli Lemma. 
 1. Linear Algebra
-    - Singular Value Decomposition
-    - Matrix Norms
-    - Projection Matrices
-    - Perron Frobenius Theorem
+    - 01 SVD.pdf  
+        - Singular Value Decomposition Derivation (Page 1 - 3)
+        - Frobenious Norm equals Sum of Singular Values (Page 3)
+        - Moore-Penroose Pseudo Inverse (Page 4)
+    - 02 Matrix Norms
+        - Conditions of Matrix Norms (i, ii, iii, iv) (Page 1)
+        - Reverse triangle inequality (Page 1)
+        - Frobenious Norm (Page 2)
+            - Submultiplicativity of Frobenious Norm
+        - Induced Matrix Norms (Page 3)
+            - $L_1, L_2, L_\infty$ norms (Page 4 - 5)
+            - Relations between $L_p$ norms. (Page 5)
+            - $L_p$ norm of diagonal matrices (Page 5)
+        - Spectral Radius (Page 6)
+            - Gelfand's Formula (Page 7)
+        - Condition number of Matrix/Linear System Errors (Page 8)
+        - Nuclear Norm (Page 9)
+    - 03 Projection Matrices
+        - Projector Matrix
+            - Matrix Norm
+            - Uniqueness
+        - Orthogonal Projector
+            - Least Squares Problem
+            - Eigenvalues of a Projector
+        - Sum of Projection Matrices
+    - 04 Perron Frobenius Theorem
+        - Statement and Proof (6 pages)
+        - Primitive Matrices
+        - Irreducible Non-negative Matrices
+        
 2. Convexity and Optimization
     - Convex and Concave Functions
     - Concavity of Log Det Function
@@ -40,6 +66,7 @@ For now the material I am targetting is the material covered by [Prof. Ahmed S. 
     - KKT Conditions
     - Diferentiation with Respect to Vectors and Matrices
     - Random Coordinate Descent
+    
 3. Discrete Fourier Transform
     - Review
     - Multidimensional Sampling and Quantization
