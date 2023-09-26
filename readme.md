@@ -1,6 +1,6 @@
 # Mathematics for Signal Processing in Lean 4
 
-This repository aims to formalize mathematical theorems in the [`LƎⱯN 4`](https://leanprover.github.io/about/) programming language that are commonly used in the Signal Processing and Communication fields. We build on top of [`mathlib4`](https://github.com/leanprover-community/mathlib4) "The math library of Lean 4". 
+This repository aims to formalize mathematical theorems that are commonly used in the Signal Processing and Communication fields, in the [`LƎⱯN 4`](https://leanprover.github.io/about/) programming language. We build on top of [`mathlib4`](https://github.com/leanprover-community/mathlib4) "The math library of Lean 4". 
 
 For now the material I am targetting is the material covered by [Prof. Ahmed S. Salem](https://www.kaust.edu.sa/en/study/faculty/ahmed-k-sultan-salem) in the [AMCS 249](https://registrar-programguide.kaust.edu.sa/2023-2024/Program-Guide/Courses/AMCS-Applied-Mathematical-and-Computational-Science/200/AMCS-249) course taught at [KAUST](https://www.kaust.edu.sa/). Video recordings of the lectures can be found on the [Prof. Sultan's Youtube Channel](https://www.youtube.com/playlist?list=PLDWe3i9elAdLlaCdx7tMkLNxelfjkrzAY). The [Materials/Notes](https://drive.google.com/drive/folders/1vKg8hv21zalUVGc0cFOTbKlHzQIomiVu) have been generously placed on a public Google Drive Link.
 
