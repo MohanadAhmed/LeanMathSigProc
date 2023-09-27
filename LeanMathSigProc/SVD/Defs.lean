@@ -311,16 +311,6 @@ lemma U₁'_mul_μ'_mul_U₁'_conjTranspose (A : Matrix (Fin M) (Fin N) 𝕂) :
 
 open scoped ComplexOrder
 
-lemma eigenvalues_conjTranspose_mul_self_nonneg {m n : Type*}
-    [Fintype m] [Fintype n] [DecidableEq n] {A : Matrix m n 𝕂} :
-    ∀ i , 0 ≤ (isHermitian_transpose_mul_self A).eigenvalues i :=
-  Matrix.PosSemidef.eigenvalues_nonneg (Matrix.posSemidef_conjTranspose_mul_self _)
-
-lemma eigenvalues_self_mul_conjTranspose_nonneg {m n : Type*}
-    [Fintype m] [Fintype n] [DecidableEq m] {A : Matrix m n 𝕂} :
-    ∀ i , 0 ≤ (isHermitian_mul_conjTranspose_self A).eigenvalues i :=
-  Matrix.PosSemidef.eigenvalues_nonneg (Matrix.posSemidef_self_mul_conjTranspose _)
-
 lemma svdσ_inv (A : Matrix (Fin M) (Fin N) 𝕂) : A.svdσ⁻¹ =
     (reindex
       (finRankEquivEigsConjTransposeMulSelf A).symm
@@ -334,7 +324,7 @@ lemma svdσ_inv (A : Matrix (Fin M) (Fin N) 𝕂) : A.svdσ⁻¹ =
   rw [← diagonal_one, diagonal_eq_diagonal_iff]
   intros i
   rw [mul_one_div_cancel]
-  exact (Real.sqrt_ne_zero (eigenvalues_conjTranspose_mul_self_nonneg _)).2
+  exact (Real.sqrt_ne_zero (eigenvalues_conjTranspose_mul_self_nonneg _ _)).2
     ((finRankEquivEigsConjTransposeMulSelf A).1 i).prop
 
 lemma σ_inv_μ_σ_inv_eq_one (A : Matrix (Fin M) (Fin N) 𝕂) :
@@ -346,7 +336,7 @@ lemma σ_inv_μ_σ_inv_eq_one (A : Matrix (Fin M) (Fin N) 𝕂) :
   intro i
   rw [mul_comm, ← mul_assoc, ← mul_inv, Real.mul_self_sqrt, inv_mul_cancel]
   exact ((finRankEquivEigsConjTransposeMulSelf A).1 i).prop
-  exact (eigenvalues_conjTranspose_mul_self_nonneg _)
+  exact (eigenvalues_conjTranspose_mul_self_nonneg _ _)
 
 lemma IsUnit_det_svdσ (A : Matrix (Fin M) (Fin N) 𝕂) : IsUnit (A.svdσ.det) := by
   unfold svdσ
@@ -354,7 +344,7 @@ lemma IsUnit_det_svdσ (A : Matrix (Fin M) (Fin N) 𝕂) : IsUnit (A.svdσ.det) 
   simp only [ne_eq, submatrix_diagonal_equiv, det_diagonal, Function.comp_apply]
   apply Ne.isUnit _
   exact Finset.prod_ne_zero_iff.2 ( fun i _ =>
-    (Real.sqrt_ne_zero (eigenvalues_conjTranspose_mul_self_nonneg _)).2
+    (Real.sqrt_ne_zero (eigenvalues_conjTranspose_mul_self_nonneg _ _)).2
       ((finRankEquivEigsConjTransposeMulSelf A).1 i).prop)
 
 lemma IsUnit_det_svdσ_mapK (A : Matrix (Fin M) (Fin N) 𝕂) :
@@ -365,7 +355,7 @@ lemma IsUnit_det_svdσ_mapK (A : Matrix (Fin M) (Fin N) 𝕂) :
   rw [isUnit_iff_ne_zero, Finset.prod_ne_zero_iff]
   intro i
   simp only [Finset.mem_univ, ne_eq, map_eq_zero, forall_true_left]
-  apply (Real.sqrt_ne_zero (eigenvalues_conjTranspose_mul_self_nonneg _)).2
+  apply (Real.sqrt_ne_zero (eigenvalues_conjTranspose_mul_self_nonneg _ _)).2
       ((finRankEquivEigsConjTransposeMulSelf A).1 i).prop
 
 lemma svdσ_inv_mapK (A : Matrix (Fin M) (Fin N) 𝕂) :
