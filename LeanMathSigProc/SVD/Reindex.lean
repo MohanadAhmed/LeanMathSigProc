@@ -18,7 +18,7 @@ representations smoothly. Let R be the rank. Then:
   Fin M ≃ {Non-zero Eigs} ⊕ (Zero Eigs) ≃ Fin R ⊕ Fin (M - R)
 
   Note that we know R ≤ MIN(M, N) -/
-variable {𝕂: Type*} [IsROrC 𝕂] [DecidableEq 𝕂]
+variable {𝕂: Type*} [RCLike 𝕂] [DecidableEq 𝕂]
 variable {M N : ℕ}
 
 open Matrix BigOperators

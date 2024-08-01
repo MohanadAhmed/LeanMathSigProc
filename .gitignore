@@ -1,3 +1,8 @@
 /build
 /lake-packages/*
 *.olean
+*.ilean
+*.c
+*.hash
+*.trace
+.lake
