@@ -83,12 +83,18 @@ The vectors in U₂ have no such issue since they are multiplied by zero singula
 Singular Value decomposition, SVD
 -/
 
-variable {𝕂 : Type*} [IsROrC 𝕂] [DecidableEq 𝕂]
+variable {𝕂 : Type*} [RCLike 𝕂] [DecidableEq 𝕂]
 variable {M N : ℕ}
 
 open Matrix BigOperators
 
 namespace Matrix
+
+noncomputable def IsHermitian.eigenvectorMatrix {n : Type*} [Fintype n] {A : Matrix n n 𝕂} [DecidableEq n]
+  (hA : IsHermitian A) : Matrix n n 𝕂 := (IsHermitian.eigenvectorUnitary hA)
+
+noncomputable def IsHermitian.conjTranpose_eigenvectorMatrix {n : Type*} [Fintype n] {A : Matrix n n 𝕂} [DecidableEq n]
+  (hA : IsHermitian A) : Matrix n n 𝕂 := (IsHermitian.eigenvectorUnitary hA)⁻¹
 
 /-- The right eigenvectors of a matrix A corresponding to its non-zero eigenvalues -/
 noncomputable def svdV₁ (A : Matrix (Fin M) (Fin N) 𝕂) : Matrix (Fin N) (Fin (A.rank)) 𝕂 :=
@@ -176,6 +182,7 @@ lemma reindex_eigenRowEquiv_eigenvectorMatrix (A : Matrix (Fin M) (Fin N) 𝕂) 
 lemma V₁_conjTranspose_mul_V₁ (A : Matrix (Fin M) (Fin N) 𝕂) : A.svdV₁ᴴ * A.svdV₁ = 1 := by
   simp_rw [svdV₁, toColumns₁, reindex_apply, Equiv.refl_symm, Equiv.coe_refl, submatrix_apply,
     id_eq, HMul.hMul, dotProduct, conjTranspose_apply, of_apply, ← conjTranspose_apply,
+    IsHermitian.eigenvectorMatrix,
     IsHermitian.conjTranspose_eigenvectorMatrix, ← mul_apply,
     Matrix.mul_eq_one_comm.1 (IsHermitian.eigenvectorMatrix_mul_inv _), one_apply,
     EmbeddingLike.apply_eq_iff_eq, Sum.inl.injEq]
